@@ -1,0 +1,13 @@
+{
+  "name"          : "LESS2",
+  "description"   : "Leaner CSS",
+  "url"           : "http://lesscss.org",
+  "keywords"      : ["css", "parser", "lesscss", "browser"],
+  "author"        : ["Alexis Sellier <self@cloudhead.net>","Yuanyan <yuanyan.cao@gmail.com>"],
+  "contributors"  : [],
+  "version"       : "2.0.0",
+  "bin"           : { "lessc": "./bin/lessc" },
+  "main"          : "./lib/less/index",
+  "directories"   : { "test": "./test" },
+  "engines"       : { "node": ">=0.4.0" }
+}
