@@ -18,6 +18,7 @@ HEADER = build/header.js
 VERSION = `cat package.json | grep version \
 														| grep -o '[0-9]\.[0-9]\.[0-9]\+'`
 DIST = dist/less-${VERSION}.js
+DIST_LATEST = dist/less-latest.js
 DIST_MIN = dist/less-${VERSION}.min.js
 
 less:
@@ -33,6 +34,7 @@ less:
 	      ${SRC}/tree.js\
 	      ${SRC}/browser.js >> ${DIST}
 	@@echo "})(window);" >> ${DIST}
+	@@cp -f ${DIST} ${DIST_LATEST}
 	@@echo ${DIST} built.
 
 min: less
